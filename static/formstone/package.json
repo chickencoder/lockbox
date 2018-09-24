@@ -1,0 +1,120 @@
+{
+  "_args": [
+    [
+      "formstone",
+      "/home/jesse/workspace/lockbox"
+    ]
+  ],
+  "_from": "formstone@latest",
+  "_id": "formstone@1.4.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/formstone",
+  "_nodeVersion": "8.2.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/formstone-1.4.2.tgz_1510602382732_0.7887774403207004"
+  },
+  "_npmUser": {
+    "email": "mr@benplum.com",
+    "name": "benplum"
+  },
+  "_npmVersion": "5.4.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "formstone",
+    "raw": "formstone",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/formstone/-/formstone-1.4.2.tgz",
+  "_shasum": "59d9d4161532c4707a845583c48fc10e2cec07b0",
+  "_shrinkwrap": null,
+  "_spec": "formstone",
+  "_where": "/home/jesse/workspace/lockbox",
+  "author": {
+    "email": "mr@benplum.com",
+    "name": "Ben Plum",
+    "url": "http://www.benplum.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Formstone/Formstone/issues"
+  },
+  "codename": "formstone",
+  "demo": "http://formstone.it/demo/",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "description": "Library of modular front end components.",
+  "devDependencies": {
+    "fs-sync": "^1.0.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-banner": "^0.1.3",
+    "gulp-beautify": "^2.0.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-clip-empty-files": "^0.1.2",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-header": "^1.8.9",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-include": "^2.3.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.2",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace-include": "^1.3.1",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zetzer": "^1.0.4",
+    "jshint": "^2.9.5",
+    "less-plugin-npm-import": "^2.1.0",
+    "moment": "^2.18.1",
+    "normalize-css": "^2.3.1",
+    "prismjs": "^1.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-6Q0zpus5RAC6jvhNyzDT25swptmVLy/uHLYzOy2Ja7SOWQ225IPQq4HZUjtuMzUSskHY6aLzWB/wo92aPXi0sw==",
+    "shasum": "59d9d4161532c4707a845583c48fc10e2cec07b0",
+    "tarball": "https://registry.npmjs.org/formstone/-/formstone-1.4.2.tgz"
+  },
+  "gitHead": "b5f3bdcb1a8d83cdc7ad618e6e3a5e75c9c37d83",
+  "homepage": "http://formstone.it/",
+  "homepage_short": "formstone.it",
+  "id": "formstone",
+  "license": "GPL-3.0",
+  "main": "dist/js/core.js",
+  "maintainers": [
+    {
+      "name": "benplum",
+      "email": "mr@benplum.com"
+    }
+  ],
+  "name": "formstone",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "realname": "Formstone",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Formstone/Formstone.git"
+  },
+  "scripts": {},
+  "src": {
+    "vars": {
+      "mq_min_ht": "800",
+      "mq_min_ht_sm": "500",
+      "mq_min_lg": "980",
+      "mq_min_md": "740",
+      "mq_min_sm": "500",
+      "mq_min_xl": "1220",
+      "mq_min_xs": "320"
+    }
+  },
+  "version": "1.4.2"
+}

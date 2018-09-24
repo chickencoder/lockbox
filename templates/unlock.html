@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %} Unlock {% endblock %}
+
+{% block content %}
+    <style>
+        @media (max-width: 400px) {
+            .entry-box-input {
+                font-size: 2rem;
+            }
+
+            .entry-box {
+                width: 3.6rem;
+            }
+        }
+    </style>
+
+    <main class="container">
+
+        {% if failed %}
+            <p class="center" id="error">Invalid Key. Please Try Again</p>
+            <br>
+
+        {% else %}
+            <p class="center">
+                Enter a key to unlock a lockbox
+            </p>
+        {% endif %} 
+        
+        <form autocomplete="off" method="POST">
+            <div id="entry-container">
+                <div class="entry-box entry-box-active">
+                    <div class="entry-box-inner">
+                        <input name="entry-0" id="entry-0" class="entry-box-input" type="text" value="" maxlength="1">
+                    </div>
+                </div>
+                <div class="entry-box">
+                    <div class="entry-box-inner">
+                        <input name="entry-1" id="entry-1" class="entry-box-input" type="text" value="" maxlength="1">
+                    </div>
+                </div>
+                <div class="entry-box">
+                    <div class="entry-box-inner">
+                        <input name="entry-2" id="entry-2" class="entry-box-input" type="text" value="" maxlength="1">
+                    </div>
+                </div>
+                <div class="entry-box">
+                    <div class="entry-box-inner">
+                        <input name="entry-3" id="entry-3" class="entry-box-input" type="text" value="" maxlength="1">
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" id="unlock" class="btn" value="Unlock">
+        </form>
+    </main>
+    <br>
+
+    <script>
+        document.getElementById("entry-0").focus();
+
+        var elemIds = ["entry-0", "entry-1", "entry-2", "entry-3"];
+
+        elemIds.forEach(function(id) {
+            document.getElementById(id).addEventListener("input", function() {
+                // Make current element not active
+                document.getElementById(id).parentElement.parentElement.classList.remove("entry-box-active")
+           
+                if (elemIds.indexOf(id) < elemIds.length) {
+                    var nextId = parseInt(elemIds[elemIds.indexOf(id)].slice(-1)) + 1;
+                    nextId = "entry-" + nextId.toString();
+                    document.getElementById(nextId).parentElement.parentElement.classList.add("entry-box-active");
+                    document.getElementById(nextId).focus();
+                }
+
+            });
+        })
+    </script>
+
+
+{% endblock %}

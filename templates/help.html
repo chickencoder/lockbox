@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %} Unlock {% endblock %}
+
+{% block content %}
+    <style>
+        #help {
+            display: none!important;
+        }
+    </style>
+
+    <main class="container">
+        <h1 id="title">Help</h1>
+        
+        <h2>Uploading Files</h2>
+        <p>There are two ways of selecting the file you wish to upload into a Lockbox. The first is by dragging and dropping the file from
+        a file explorer or your Desktop into the grey area of the front page.If the drag-and-drop has been successful, then a loading animation
+        should start. If this does not happen, try again.</p>
+        
+        <p>The second option for selecting a file is by clicking on the grey area of the front page and
+        manually browsing for your file through your operating system's default browser. Similarly, if successful, the area should present a
+        loading animation to indicate that your file is being uploaded.
+        </p>
+
+        <p>There are a few limitations on uploading files which could cause you upload to fail...</p>
+        <ol>
+            <li>Files must be less than 1GB is size</li>
+            <li>Files should conform to standard extensions</li>
+        </ol>
+
+        <h2>Unlocking Files</h2>
+        <p>
+            Once a has been uploaded a file, it is important that the 4 digit pin issued by Lockbox
+            is kept safe so that it can be easily accessed when necessary. Without this pin, uploaded files
+            cannot be recovered.
+        </p>
+        <p>
+            When entering a pin to unlock a file, it is important to note that...
+            1. Passcodes (pins) are case sensitive
+            2. Passcodes are only 4 characters in length
+        </p>
+        <p>
+            Since uploaded files can only be accessed with a pin, Lockbox should never be used
+            as an option for saving or backing up files. Since files are only kept for 24 hours,
+            it is likely that if a file is stored in a Lockbox and no where else, it will be lost.
+            Therefore, we strongly advise to only use Lockbox as a method for sharing files, not storing them. 
+        </p>
+        <br>
+        <br>
+
+    </main>
+{% endblock %}

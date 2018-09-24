@@ -1,0 +1,39 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="/static/assets/cubey.png">
+    <script defer src="/static/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+    <link href="/static/css/lockbox.css" rel="stylesheet">
+    <title>Lockbox - {% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    <script src="/static/js/jquery.min.js"></script>
+    <header>
+        <div class="container">
+            <a href="/">
+                <img src="static/assets/cubey.svg" id="logo">
+            </a>
+        </div>
+    </header>
+
+    <div id="wrapper">
+        {% block content %} {% endblock %}
+        <a href="/help" id="help">
+            I Need Help
+        </a>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p class="center">
+                &copy; Copyright 2017. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

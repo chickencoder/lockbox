@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <main class="container">
+
+        <p class="center">
+            Your file has been successfully uploaded!
+            <br>Your retrieval code is...
+        </p>
+
+        <code id="passcode">
+            {{passcode}}
+        </code>
+
+        <p class="center">
+            File expires in 24 hours.
+            <br>
+            <small>{{filename}}</small>
+            <br>
+        </p>
+    </main>
+
+{% endblock %}

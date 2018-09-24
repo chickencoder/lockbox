@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+    <style>
+        .upload {
+            position: relative;
+            overflow: hidden
+        }
+        .upload,
+        .upload *,
+        .upload:after,
+        .upload:before,
+        .upload:after,
+        .upload:before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: none;
+            transition: none;
+            -webkit-user-select: none!important;
+            -moz-user-select: none!important;
+            -ms-user-select: none!important;
+            user-select: none!important
+        }
+        .upload-input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1px;
+            opacity: 0;
+            pointer-events: none
+        }
+        .upload-target {
+            cursor: pointer
+        }
+        .upload-disabled .upload-target,
+        .no-touch .upload-disabled:hover .upload-target {
+            cursor: default;
+            cursor: not-allowed
+        }
+    </style>
+
+    <section class="container">
+        <p>
+            Drop your files here into <b>Lockbox</b> and let us keep it safe for your until you're ready to share it.
+            Got a key? <a href="/unlock">Unlock a lockbox now.</a>
+        </p>
+    </section>
+
+    <main>
+        <div id="drag-drop">
+            
+            <div class="container">
+                <div id="drop-file-here">
+                    <form method="POST" action="/upload" enctype=multipart/form-data>
+                        <div id="drop-file-content">
+                            <i class="fa fa-upload" aria-hidden="true" style="font-size: 50px; color: #ccc;"></i>
+                            <br><br>Drag and drop files or click to select
+                        </div>
+                        <input id="drop-file" type="file" multiple="" name="file">
+                        <input type="submit" id="sub">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/jquery.filedrop.js"></script>
+    <script>
+        function hover() {
+            $("#drop-file-content").html("Drop file here")
+        }
+
+        function leave() {
+            $("#drop-file-content").html('<i class="fa fa-upload" aria-hidden="true" style="font-size: 50px; color: #ccc;"></i><br><br>Drag and drop files or click to select');
+        }
+
+        function drop() {
+            $("#drop-file-content").html("<div class='spinner'></div>");
+        }
+
+        $("#drop-file-content").click(function(){
+            $("#drop-file").click();
+        });
+
+        $("#drop-file-content").on("dragover", function(event) {
+            event.preventDefault();  
+            event.stopPropagation();
+            hover();
+        });
+
+        $("#drop-file").on("dragover", function(event) {
+            event.preventDefault();  
+            event.stopPropagation();
+            hover();
+        });
+
+        $("#drop-file-content").on("dragleave", function(event) {
+            event.preventDefault();  
+            event.stopPropagation();
+            leave();
+        });
+
+        $("input[type='file']").change(function(e) {
+            console.log(e.originalEvent)
+            $("#sub").click();
+
+            drop();
+        })
+
+    </script>
+{% endblock %}
